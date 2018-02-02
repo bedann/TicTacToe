@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Attributes">
+    <attr name="cardColor" format="reference"/>  <!--0-->
+    <attr name="cardTextColor" format="reference"/> <!--1-->
+        <attr name="cardSecondaryTextColor" format="reference"/> <!--2-->
+    </declare-styleable>
+</resources>

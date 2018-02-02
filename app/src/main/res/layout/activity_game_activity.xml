@@ -1,0 +1,214 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.intersofteagles.tictactoe.Activities.GameActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topPanel"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/player1_pic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 1"
+                android:textStyle="bold"
+                android:maxWidth="100dp"
+                android:ellipsize="end"
+                android:id="@+id/player1"
+                android:layout_marginTop="5dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 wins"
+                android:id="@+id/score1"
+                android:textColor="@color/green"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VS"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/symbol_size"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/player2_pic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 2"
+                android:textStyle="bold"
+                android:maxWidth="100dp"
+                android:ellipsize="end"
+                android:id="@+id/player2"
+                android:layout_marginTop="5dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 wins"
+                android:id="@+id/score2"
+                android:textColor="@color/green"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+        <com.intersofteagles.tictactoe.Commoners.SquareRelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/topPanel"
+            android:animateLayoutChanges="true"
+        android:layout_marginTop="10dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler"
+            android:padding="5dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GAME OVER"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:alpha="0"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/winner"
+            android:id="@+id/game_over"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player 1 wins"
+            android:alpha="0"
+            android:textColor="@color/code"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:id="@+id/winner"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW GAME"
+            android:background="?selectableItemBackground"
+            android:id="@+id/new_game"
+            android:visibility="gone"
+            android:onClick="newGame"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/winner"
+            android:layout_marginTop="30dp"/>
+
+    </com.intersofteagles.tictactoe.Commoners.SquareRelativeLayout>
+
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/bottom_sheet"
+        android:orientation="vertical"
+        android:background="@drawable/chat_fade"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="90dp"
+        android:animateLayoutChanges="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/chat_fade"
+            android:scaleType="fitXY"
+            android:onClick="doNothing"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/chat_recycler"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="50dp"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textArea"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/wire2">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Say something ..."
+            android:id="@+id/text"
+            android:inputType="textShortMessage"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:background="#bf0b0b0b"
+            android:paddingRight="70dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="7dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEND"
+            android:textStyle="bold"
+            android:id="@+id/send"
+            android:onClick="sendMessage"
+            android:layout_alignParentRight="true"
+            android:padding="7dp"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

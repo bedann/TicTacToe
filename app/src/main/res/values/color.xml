@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#424242</color>
+    <color name="windowBackground">#424242</color>
+    <color name="navbarColor">#000000</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="orange">#FF9900</color>
+    <color name="green">#009900</color>
+    <color name="gray_background">#414151</color>
+    <color name = "gray_highlight">#6e6e7b</color>
+    <color name = "gray_smooth">#515254</color>
+    <color name="chart1">#FF5722</color>
+    <color name="code">#FDD835</color>
+    <color name="selected">#cecece</color>
+    <color name="select">#EEEEEE</color>
+    <color name="darkgrey">#808080</color>
+    <color name="dark_blue">#002040</color>
+    <color name="light_blue">#208ac7</color>
+    <color name="accecntAccent">#8e9ad5</color>
+
+
+    <color name="dark">#303030</color>
+
+    <color name="chart_bg">#E0F2F1</color>
+    <color name="top_bg">#B2DFDB</color>
+    <color name="middle_bg">#4DB6AC</color>
+    <color name="bottom_bg">#009688</color>
+    <color name="chatText">#84FFFF</color>>
+    <color name="chatName">#B2FF59</color>
+    <color name="health">#B0BEC5</color>
+    <color name="error">@android:color/holo_red_dark</color>
+    <color name="normal">@android:color/black</color>
+
+    <color name="for_every_one2">#47bac1</color>
+    <color name="choices">#ff8963</color>
+    <color name="beauty_s">#b048c5</color>
+    <color name="like">#62caef</color>
+    <color name="freelance">#d7d125</color>
+    <color name="for_every_one">#1ea8ff</color>
+    <color name="feedback">#20ade2</color>
+
+
+    <color name="icon_enabled">#FFFFFFFF</color>
+    <color name="icon_disabled">#FF63727B</color>
+
+
+</resources>

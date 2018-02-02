@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.intersofteagles.tictactoe.Activities.CreateGame">
+
+
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_below="@+id/toolbar">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Game title ..."
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/change"
+            android:onClick="changeSymbol"
+            android:background="?selectableItemBackground"
+            android:gravity="center"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/symbol"
+                android:src="@drawable/rick_big"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change character"
+                android:layout_margin="10dp"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select another player"
+            android:textColor="@color/selected"
+            android:layout_marginTop="30dp"/>
+
+        <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler"/>
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:onClick="submit"
+        android:id="@+id/fab" />
+
+
+</RelativeLayout>
